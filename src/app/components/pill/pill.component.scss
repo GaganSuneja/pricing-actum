@@ -1,0 +1,18 @@
+.pill {
+    width: 100px;
+    border: 1px solid;
+    background-color: grey;
+    color: white;
+    &.active {
+        color: white;
+        background: grey;
+    }
+    &.right-border {
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    &.left-border {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+}
