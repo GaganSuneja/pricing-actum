@@ -1,10 +1,10 @@
-export interface IPriceAttributes {
+export interface IPlan {
     leadsPerMonth:number;
     pricePerTransfer: number;
     platformPrice: number;
 }
 
-export interface IPriceRange {
+export interface IPlanRange {
     min: number;
     max: number;
 }

@@ -1,1 +1,22 @@
 /* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+.action-btn {
+    padding: 20px;
+    text-align: center;
+    color: #ee5a36;
+    background-color: #ffff;
+    font-weight: bold;
+    border:1px solid #ee5a36;
+    border-radius: 4px;
+    cursor: pointer;
+    &.highlight {
+        color:#ffff;
+        background-color: #ee5a36;
+    }
+}
+
+.m-t-20 {
+    margin-top:20px
+}

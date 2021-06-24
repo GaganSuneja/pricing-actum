@@ -1,1 +1,2 @@
-export {IPriceAttributes,IPriceRange} from './pricing';
+export {IPlan,IPlanRange} from './pricing';
+export {IPill} from './pill';

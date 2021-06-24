@@ -1,1 +1,10 @@
-<p>pill-container works!</p>
+<ng-container *ngFor="let pd of pills;let i = index">
+    <app-pill   [leftBorderSmooth]="i === 0" 
+                [rightBorderSmooth]="i === pills.length - 1" 
+                (click)="onSelect(i)" 
+                [active]="pd.isSelected"
+                [text]="pd.text"
+                style="display: flex;"
+                >
+    </app-pill>
+</ng-container>

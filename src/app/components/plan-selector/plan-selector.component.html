@@ -1,0 +1,10 @@
+<div style="align-items: center;
+justify-content: center;
+margin: 3% auto;
+max-width: fit-content;">
+<ng-container *ngFor="let plan of plans">
+    <app-plan-card style="margin-right: 10px;"[plan]="plan" (emitSelectedPlan)="selectPlan($event)">
+
+    </app-plan-card>
+</ng-container>
+<div>

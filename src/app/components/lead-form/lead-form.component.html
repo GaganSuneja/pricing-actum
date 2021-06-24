@@ -1,0 +1,98 @@
+<ng-template #content>
+  <div class="modal-header">
+    <h4 class="modal-title" id="modal-basic-title">Get Started With Squad Voice</h4>
+    <button type="button" class="close" aria-label="Close" (click)="closeForm()">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  <div class="modal-body">
+    <span>Plan Selected: </span> <span style="font-weight: bold;">{{plan.planName}}</span>
+    <form [formGroup]="leadInfo">
+      <div>
+        <div class="row form-group">
+          <div class="col-12">
+            <label for="name">Name</label>
+            <div class="input-group">
+              <input id="name" formControlName="name" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-6">
+            <label for="email">E-mail Address</label>
+            <div class="input-group">
+              <input id="email" formControlName="email" class="form-control" type="email">
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="phone">Phone No.</label>
+            <div class="input-group">
+              <input id="phone" formControlName="phone" class="form-control" type="text">
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-6">
+            <label for="lead">No of Leads you generate in a month</label>
+            <div class="input-group">
+              <input id="lead" formControlName="leadCount" class="form-control" type="number">
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="generatedLeads">Total Leads in Your Crm.</label>
+            <div class="input-group">
+              <input id="generatedLeads" formControlName="crmLeadCount" class="form-control" type="number">
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-6">
+            <label for="crm">Which Crm do you use</label>
+            <div class="input-group">
+              <input id="email" formControlName="crm" class="form-control" type="text">
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="phone">No of Agents</label>
+            <div class="input-group">
+              <input id="phone" formControlName="agent" class="form-control" type="number">
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-12">
+            <p>What are you biggest Lead Sources</p>
+            <div class="margins">
+              <label for="zillow">Zillow</label>
+              <input id="zillow" (change)="addToLeadSource($event)" type="checkbox" value="Zillow">
+              <label for="realtor" >Realtor</label>
+              <input id="realtor" (change)="addToLeadSource($event)" type="checkbox" value="Realtor">
+              <label for="ylopo">yLopo</label>
+              <input id="ylopo" (change)="addToLeadSource($event)"type="checkbox" value="yLopo">
+              <label for="others">Others</label>
+              <input id="others" (change)="addToLeadSource($event)"type="checkbox" value="Others">
+            </div>
+          </div>
+        </div>
+        <div class="row form-group">
+          <div class="col-12">
+            <p>How did you hear about us</p>
+            <div class="margins">
+              <label for="google">Google</label>
+              <input id="google" (change)="addToInfo($event)" type="checkbox" value="Google">
+              <label for="facebook">Facebook</label>
+              <input id="facebook" (change)="addToInfo($event)" type="checkbox" value="Facebook">
+              <label for="friends">Friends</label>
+              <input id="friends" (change)="addToInfo($event)" type="checkbox" value="Friends">
+              <label for="realClosers">Real Closers</label>
+              <input id="realClosers" (change)="addToInfo($event)" type="checkbox" value="Real Closers">
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="modal-footer">
+    <button type="button" class="action-btn" (click)="submit()">Submit</button>
+  </div>
+</ng-template>

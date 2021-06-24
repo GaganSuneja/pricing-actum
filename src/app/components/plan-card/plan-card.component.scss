@@ -1,0 +1,43 @@
+.card {
+    width:250px;
+    border:none;
+    display: inline-block;
+    min-height: 405px;
+    div:last-child {
+        margin-top:10px;
+    }
+}
+.visible-none {
+    visibility: hidden;
+}
+
+.header {
+    padding:20px;
+    text-align: center;
+    color:white;
+    background-color:#5a6f90;
+    font-weight: bold;
+}
+.highlight {
+    background-color: #ee5a36;
+}
+
+.font-lg {
+    font-size:20px;
+    font-weight: bold;
+}
+.section {
+    padding:20px;
+    text-align: center;
+    &.highlight {
+        background-color: #f7f7f7;
+    }
+}
+
+.sub-section {
+    border-top: 1px dotted black;
+    border-bottom:1px dotted black;
+    &.no-border {
+        border:none
+    }
+}

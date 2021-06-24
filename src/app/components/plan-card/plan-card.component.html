@@ -1,0 +1,37 @@
+<div class="card">
+  <div [ngClass]="{'header highlight':true,'visible-none':!plan.isPopular}">
+    Most Popular
+  </div>
+  <div class="header">
+    {{!plan.isEnterprise? plan.planName: 'Enterprise'}}
+  </div>
+  <div [ngClass]="{'section':true,'highlight':plan.isPopular}" *ngIf="!plan.isEnterprise">
+    <div class="sub-section no-border">
+      <h2>{{currencySymbol}}{{plan.pricePerTransfer}}</h2>
+          <p>Per Qualfied Lead</p>
+    </div>
+    <div  class="sub-section ">
+      <p>Qualfied Lead Per Month</p>
+      <h3>{{plan.leadsPerMonth}}</h3>
+    </div>
+    <div  class="sub-section no-border">
+      <p>Platform Fee Per Month</p>
+      <h3>{{currencySymbol}}{{plan.platformPrice}}</h3>
+    </div>
+  </div>
+  <div  style="background: #5a6f900d;
+  padding: 93px 20px 166px 20px;
+  text-align: center;
+  font-size: 23px;
+  font-weight: bold;" *ngIf="plan.isEnterprise">
+    <span>
+      Want More than 80 Qualified Leads each Month
+    </span>
+  </div>
+  <div *ngIf="!plan.isEnterprise" class="header font-lg">
+    {{currencySymbol}}{{plan.packagePrice}}/mo
+  </div>
+<div (click)="selectPlan()" [ngClass]="{'action-btn':true,'highlight':plan.isPopular}">
+  {{!plan.isEnterprise?'Start Your Trial':'Get In Touch'}}
+</div>
+</div>

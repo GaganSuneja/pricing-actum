@@ -1,0 +1,10 @@
+<app-pill-container style="display: grid;
+margin: auto;
+grid-template-columns: repeat(5,minmax(0,auto));
+border-radius: 4px;
+width: max-content;
+overflow: hidden;
+grid-gap: 1px;
+background: #d7d7d7;margin-top:20px"
+(selectPill)="selectedRange($event)"  
+[pillData]="pillData" [defaultSelectedPill]="defaultRangeIndex"></app-pill-container>

@@ -1,6 +1,6 @@
-import { IPriceAttributes, IPriceRange } from "./interfaces";
+import { IPlan, IPlanRange } from "./interfaces";
 
-export const pricingRange: IPriceRange[] = [
+export const pricingRange: IPlanRange[] = [
     { min: 100, max: 200 },
     { min: 200, max: 300 },
     { min: 300, max: 400 },
@@ -8,7 +8,8 @@ export const pricingRange: IPriceRange[] = [
     { min: -1, max: 500 }
 ];
 
-export const priceAttributesTable: Array<IPriceAttributes[]> = [
+
+export const priceAttributesTable: Array<IPlan[]> = [
     [
         {
             leadsPerMonth: 20,
